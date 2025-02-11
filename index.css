@@ -17,6 +17,40 @@ body {
     font-weight: 400;
 }
 
+.skillSection {
+  background-color: #B0B0B0;
+
+}
+
+.projectsSection{
+    color: #FFFFFF; 
+    background-color: #002856;
+    h2 { 
+        color: #FFFFFF !important; 
+    }
+
+    p { 
+        color: #FFFFFF !important; 
+    }
+    
+
+    ul li {
+        color: #FFFFFF !important; 
+    }
+
+
+}
+
+.experienceSection{
+
+
+}
+
+.contactSection{
+
+
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -159,7 +193,7 @@ nav ul li a:hover {
 
 .section {
     padding: 3rem 0;
-    background-color: #fff;
+   
     margin-bottom: 1rem;
 }
 
