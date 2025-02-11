@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+
+
     <header>
         <div class="cover-photo">
             <img src="cover.jpg" alt="Cover Photo" class="cover-img">
@@ -15,27 +18,40 @@
         <div class="container header-content">
             <div class="profile">
                 <img src="profile.jpg" alt="Profile Photo" class="profile-img">
-                <h1>Avinash Mishra</h1>
-                <p>Senior Lead Developer</p>
+                <h2>Avinash Mishra</h2>
+                <h2>Senior Lead Developer</h2>
+                  <br>
             </div>   
         </div>
     </header>
-<div class="navHeading">
-    <nav>
-      <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-      </ul>
-  </nav>
-</div>
+
+    <div class="navHeading">
+      <!-- Hamburger Icon for Mobile -->
+                <div class="hamburger" id="hamburger-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+      
+                <nav>
+                  <ul id="nav-list">
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#skills">Skills</a></li>
+                      <li><a href="#projects">Projects</a></li>
+                      <li><a href="#experience">Experience</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+              </nav>
+    </div>
+
   
     <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
-            <p>I am a Senior Lead Developer with 10+ years of experience in building scalable and efficient software systems. I specialize in web development, team leadership, and architecture design.</p>
+            <p>Lead Java Developer with around 9 years of experience in software
+              development, have background working with diverse geographical clients. Thoroughly proficient in coding, designing &
+              analyzing, working in a cross functional team in agile methodology experience in building scalable and efficient software systems. 
+              I specialize in web development, team leadership, and architecture design.</p>
         </div>
     </section>
 
@@ -46,28 +62,93 @@
     <section id="skills" class="section">
         <div class="container">
             <h2>Skills</h2>
-            <ul>
-                <li>Java (Microservices,Spring, Spring-Boot, )</li>
-                <li>JavaScript</li>
-                <li>HTML & CSS</li>
-                <li>Database Management (MySQL, PostgreSQL, Mongo)</li>
-                <li>Cloud Platforms (AWS)</li>
-                <li>Version Control (Git)</li>
-                <li>Agile Methodologies</li>
-            </ul>
+        <ul class="skills-list">
+    <li>
+        <strong>Programming Languages</strong>
+        <ul>
+            <li>Java, JavaScript</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Framework/Technologies</strong>
+        <ul>
+            <li>Java 11, Microservices, Spring Boot</li>
+            <li>AEM, RESTful APIs,JUnit, Mockito</li>
+            <li>Hibernate, Mybatis</li>
+            <li>jQuery, JSP, Angular</li>
+            <li>HTML, CSS, Bootstrap</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Databases</strong>
+        <ul>
+            <li>SQL, PostgreSQL, MySQL, Oracle SQL</li>
+            <li>NoSQL, MongoDB</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Development Practices</strong>
+        <ul>
+            <li>Agile, Sprints, SOLID principle, Design patterns</li>
+      
+        </ul>
+    </li>
+    <li>
+        <strong>Other Tools & Skills</strong>
+        <ul>
+            <li>AWS, GitHub, SVN</li>
+            <li>Jenkins, Maven, Gradle, Docker</li>
+            <li>Jira, SonarQube</li>
+            <li>Postman, Swagger</li>
+        </ul>
+    </li>
+</ul>
+
         </div>
     </section>
+
+    <div class="skill-photo">
+      <img src="skill.jpg" alt="Background Photo" class="skill-img">
+   </div>
 
     <section id="projects" class="section">
         <div class="container">
             <h2>Projects</h2>
             <div class="project">
                 <h3>Project Name</h3>
-                <p>Project description with technologies used and the impact it had.</p>
+                <p><b>Event & Marketing CMS (Built on Adobe Experience Manager/AEM) </b> <br>
+                  An implementation of Adobe Experience Manager which powers the marketing
+                  pages of the gartner.com domain. It helps Gartner to generate leads, also
+                  manages conferences/webinars.
+                  <ul>
+                  <li>Responsibilities-:  </li>
+                  <li>Part of E2E development Lifecyle, Full stack product development .
+                  <li> Suggesting Design for optimum solution including collaboration with
+                  Product owners for requirement gathering/clarification.</li>
+                  <li> Supported and resolved the performance testing issues, implemented
+                  features like Disaster recovery, Circuit Breaker etc. </li>
+                  <li>Code Review of other developers</p></li>
+                </ul> 
             </div>
-            <div class="project">
-                <h3>Another Project</h3>
-                <p>Details of another project including the role played and technologies used.</p>
+            <div>
+                
+               
+                  <p>  <b>Customer Acquisition System (A digital loan processing system) </b> <br>
+                    A banking product with end-to-end solution focus on digitizing of complete process of
+                  loan booking. A large-scale product with multiple lines of business and workflows for
+                  loans such as Personal loan, home Loan, Mortgage Loan etc.
+                  
+                    <ul>
+                      <li>Responsibilities-:  </li>
+                      <li>Full stack development for different workflows involving Lead details, KYC
+                  Credit Approval, Disbursal Details etc.</li>
+                  <li> Creation of Complex SQL queries for handling bulk datasets.</li>
+                  <li>Interaction with Business Analysts to map the business requirements into
+                  technical solutions and feasibility </li>
+                  <li>Fixing of performance related issues in performance testing phase
+                  <li>Code Review of other developers.</li>
+                </ul>
+                </p>
             </div>
         </div>
     </section>
@@ -76,37 +157,60 @@
         <div class="container">
             <h2>Experience</h2>
             <div class="job">
-                <h3>Lead Developer - Gartner</h3>
+                <p> <b>Lead Developer - Gartner </b></p>
                 <p><strong>Duration:</strong> Dec 2022 - Present</p>
                 <ul>
-                    <li>Led a team of 10 developers in creating a robust enterprise application.</li>
-                    <li>Improved the scalability and performance of the system, reducing load times by 40%.</li>
+                    <li>Working in AEM framework as full stack developer</li>
+                    <li>Enhancing performance, redesigning and part of requirement gathering</li>
                 </ul>
             </div>
             <div class="job">
-                <h3>Senior Associate - Nagarro/h3>
+                <p><b>Senior Associate - Nagarro </b> </p>
                 <p><strong>Duration:</strong> Aug 2019 - Aug 2022</p>
                 <ul>
                     <li>Built and deployed several microservices-based applications.</li>
                     <li>Mentored junior developers and conducted code reviews.</li>
+                    <li>part of complete project development, cycle, suggesting design for optimum solution, code review</li>
                 </ul>
             </div>
+            <div class="job">
+              <p><b>Senior Software Engineer - Nucleus Softwares</b> </p>
+              <p><strong>Duration:</strong> Aug 2016 - Aug 2019</p>
+              <ul>
+                  <li>Full stack product development</li>
+                  <li>adding modules/lines of businesses,
+                    writing backend & frontend code to implement functionalities.</li>
+                  <li>suggesting design for optimum solution, code review</li>
+              </ul>
+          </div>
         </div>
     </section>
+
+    <div class="contact-photo">
+      <img src="contact.jpg" alt="Background Photo" class="contact-img">
+   </div>
 
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
-            <p>Email: avinash25@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/avinash25mis">LinkedIn Profile</a></p>
-            <p>GitHub: <a href="https://github.com/avinash25mis">GitHub Profile</a></p>
+            <p><b>Phone :</b> +91 7686928295</p>
+            <p><b>Email :</b> avinash25mis@gmail.com</p>
+            <p><b>LinkedIn :</b> <a href="https://www.linkedin.com/in/avinash25mis">LinkedIn Profile</a></p>
+            <p><b>GitHub :</b> <a href="https://github.com/avinash25mis">GitHub Profile</a></p>
         </div>
     </section>
+
+
+    ǚ<!-- Return to Top Button -->
+<button id="return-to-top" class="return-to-top">↑ Top</button>
+
 
     <footer>
         <div class="container">
             <p>&copy; 2025 Avinash Mishra | Senior Lead Developer</p>
         </div>
     </footer>
+
+     <script src="index.js"></script>
 </body>
 </html>
