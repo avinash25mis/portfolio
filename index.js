@@ -35,18 +35,19 @@ function smoothScrollTo(targetElement) {
     const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
     const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
-    const duration = 1000; // The duration for the scroll (in milliseconds)
+    const duration = 1500; // The duration for the scroll (in milliseconds)
     let startTime = null;
 
     // Function to animate the scroll
     function scrollAnimation(currentTime) {
         if (startTime === null) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1); // Ensure progress is between 0 and 1
+        //const progress = Math.min(timeElapsed / duration, 1); // Ensure progress is between 0 and 1
+         const scrollAmount = easeInOut(timeElapsed, startPosition, distance, duration);
 
         // Calculate the current position for scroll
-        const scrollTo = startPosition + distance * progress;
-        window.scrollTo(0, scrollTo);
+        //const scrollTo = startPosition + distance * progress;
+        window.scrollTo(0, scrollAmount);
 
         // Continue the animation if not yet done
         if (timeElapsed < duration) {
@@ -60,10 +61,15 @@ function smoothScrollTo(targetElement) {
 
 
 
+function easeInOut(time, startValue, changeInValue, duration) {
+    time /= duration / 2;
+    if (time < 1) return (changeInValue / 2) * time * time + startValue;
+    time--;
+    return (-changeInValue / 2) * (time * (time - 2) - 1) + startValue;
+}
 
 
 
-// script.js
 
 // Select the "Return to Top" button
 const returnToTopButton = document.getElementById('return-to-top');
@@ -88,7 +94,7 @@ function smoothScrollToTop() {
     const startPosition = window.scrollY;
     const targetPosition = 0; // Scroll to the very top
     const distance = startPosition - targetPosition;
-    const duration = 800; // Scroll duration (in ms)
+    const duration = 700; // Scroll duration (in ms)
     let startTime = null;
 
     // Animation function to scroll the page
@@ -107,5 +113,17 @@ function smoothScrollToTop() {
 
     requestAnimationFrame(scrollAnimation);
 }
+
+
+const coverImage = document.querySelector('.cover-img');
+
+// Add a scroll event listener
+window.addEventListener('scroll', function() {
+    // Calculate how far the page has been scrolled
+    const scrollY = window.scrollY;
+
+    // Adjust the position of the cover image based on scroll
+    coverImage.style.transform = `translateY(${scrollY * 0.5}px)`; // 0.5 makes it scroll slower
+});
 
 

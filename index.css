@@ -17,37 +17,55 @@ body {
     font-weight: 400;
 }
 
-.skillSection {
-  background-color: #B0B0B0;
 
+.aboutSection{
+    background-color: white;
+    h2, p, ul li { 
+      color: black !important; 
+  }  
+    
 }
+
+
+.profileSection{
+  h2,h3, p, ul li {
+        color: black !important;
+    }
+  @media (max-width: 768px) {
+        h2,h3, p, ul li {
+              color: white !important;
+          }
+  }
+      
+}
+
+
+.skillSection{
+    background-color: #98d1cb;
+}
+
+
+
+
 
 .projectsSection{
     color: #FFFFFF; 
     background-color: #002856;
-    h2 { 
-        color: #FFFFFF !important; 
-    }
-
-    p { 
-        color: #FFFFFF !important; 
-    }
-    
-
-    ul li {
+    h2, p, ul li { 
         color: #FFFFFF !important; 
     }
 
 
 }
 
-.experienceSection{
-
-
-}
+ 
 
 .contactSection{
-
+    color: #FFFFFF; 
+    background-color: #A9A9A9;
+    h2, p, a, ul li { 
+        color: #0000EE !important; 
+    }
 
 }
 
@@ -57,14 +75,14 @@ body {
 }
 
 .navHeading {
-    background-color: #A8A8A8;
-    padding:10px
+    background-color: white;
+    padding:5px
 
 }
 
 .header-content {
-   height: 120px;
-  
+   height: 0px;
+
 }
 
 header {
@@ -75,15 +93,30 @@ header {
 
 .cover-photo {
     position: relative;
-    height: 300px;
+    height: 60vh; /* Full height of the viewport */
+    overflow: hidden; 
 }
 
 .cover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 150%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* Cover the container */
+    transform: translateY(0); /* Initial position */
+    transition: transform 0.2s ease-out;
 }
 
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
 
 
 .background-photo {
@@ -93,7 +126,7 @@ header {
 
 .background-img {
     width: 100%;
-    height: 100%;
+    height: 116%;
     object-fit: cover;
 }
 
@@ -106,7 +139,7 @@ header {
 
 .skill-img {
     width: 100%;
-    height: 100%;
+    height: 115%;
     object-fit: fill;
 }
 
@@ -126,21 +159,24 @@ header {
 .profile {
     top: 60%;
     left: 50%;
-    transform: translate(-45%, -50%);
+    transform: translate(-30%, -50%);
     text-align: center;
+    max-width: 40%;
 }
 
+
+
 .profile-img {
-    width: 180px;
-    height: 180px;
+    width: 195px;
+    height: 185px;
     border-radius: 50%;
     border: 5px solid #fff;
-    margin-bottom: 15px;
+    
 }
 
 header h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+   
 }
 
 header p {
@@ -149,10 +185,10 @@ header p {
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     list-style: none;
     padding: 1rem 0;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 
@@ -161,16 +197,21 @@ nav ul li {
     margin: 0 1rem;
 }
 
+nav a {
+    transition: background-color 0.8s ease, color 0.8s ease;
+    padding:15px; 
+}
+
 nav ul li a {
-    color: #fff;
+    color: #120101;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 nav ul li a:hover {
-    background-color: black;
+    background-color: #606060;
     color: white; 
-    padding:15px;  
+     
 }
 
 .hamburger {
@@ -187,18 +228,15 @@ nav ul li a:hover {
 
 .hamburger .bar {
     height: 4px;
-    background-color: #fff;
+    background-color: black;
     border-radius: 4px;
 }
 
 .section {
     padding: 3rem 0;
-   
-    margin-bottom: 1rem;
 }
 
 .section h2 {
-    font-size: 2rem;
     margin-bottom: 1rem;
     color: #333;
 }
@@ -218,7 +256,7 @@ ul {
 }
 
 footer {
-    background-color: #333;
+    background-color: #707070;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -235,8 +273,10 @@ footer {
     }
     .profile {
         position: absolute;
+        transform: translate(-54%, -50%);
         white-space: nowrap;
     }
+    
 
     .cover-photo {
         height: 250px;
@@ -258,9 +298,7 @@ footer {
         font-size: 1rem;
     }
 
-    .section h2 {
-        font-size: 1.8rem;
-    }
+
 
     nav ul {
         display: none;
@@ -308,7 +346,7 @@ nav ul.active {
     background-color: #333; /* Dark background */
     color: white; /* White text */
     border: none;
-    padding: 15px;
+    padding: 25px;
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
