@@ -19,7 +19,7 @@ body {
 
 
 .aboutSection{
-    background-color: white;
+    background-color: #F0F0F0;
     h2, p, ul li { 
       color: black !important; 
   }  
@@ -75,7 +75,7 @@ body {
 }
 
 .navHeading {
-    background-color: white;
+    background-color: #F0F0F0;
     padding:5px
 
 }
