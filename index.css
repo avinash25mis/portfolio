@@ -15,6 +15,8 @@ body {
     background-color: #f4f4f4;
     color:white;
     font-weight: 400;
+
+   
 }
 
 
@@ -76,7 +78,7 @@ body {
 
 .navHeading {
     background-color: #F0F0F0;
-    padding:5px
+  
 
 }
 
@@ -93,40 +95,28 @@ header {
 
 .cover-photo {
     position: relative;
-    height: 60vh; /* Full height of the viewport */
+    height: 50vh; 
     overflow: hidden; 
 }
 
 .cover-img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the container */
-    transform: translateY(0); /* Initial position */
-    transition: transform 0.2s ease-out;
-}
-
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 1;
+    object-fit: cover;
 }
 
 
-.background-photo {
+
+.about-photo {
     position: relative;
-    height: 300px;
+    height: 70vh; 
+    overflow: hidden; 
+    background-color: #F0F0F0;
 }
 
-.background-img {
+.about-img {
     width: 100%;
-    height: 116%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -134,20 +124,22 @@ header {
 
 .skill-photo {
     position: relative;
-    height: 300px;
+    height: 50vh; 
+    overflow: hidden; 
 }
 
 .skill-img {
     width: 100%;
-    height: 115%;
-    object-fit: fill;
+    height: 100%;
+    object-fit: cover;
 }
 
 
 
 .contact-photo {
     position: relative;
-    height: 300px;
+    height: 50vh; 
+    overflow: hidden; 
 }
 
 .contact-img {
@@ -163,7 +155,6 @@ header {
     text-align: center;
     max-width: 40%;
 }
-
 
 
 .profile-img {
@@ -262,6 +253,15 @@ footer {
     text-align: center;
 }
 
+.parallex {
+    position: relative;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
 
 
 
@@ -323,6 +323,8 @@ footer {
         
     }
 
+  
+
 
     /* Footer */
     footer {
@@ -359,6 +361,9 @@ nav ul.active {
 .return-to-top:hover {
     background-color: #555; /* Darker background on hover */
 }
+
+
+
 
 
 

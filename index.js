@@ -3,13 +3,9 @@ const navList = document.getElementById('nav-list');
 
 // Add event listener to the hamburger icon
 hamburger.addEventListener('click', () => {
-    // Toggle the active class to both the hamburger and nav list
     hamburger.classList.toggle('active');
     navList.classList.toggle('active');
 });
-
-
-
 
 
 
@@ -35,27 +31,20 @@ function smoothScrollTo(targetElement) {
     const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
     const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
-    const duration = 1500; // The duration for the scroll (in milliseconds)
+    const duration = 1300; //
     let startTime = null;
 
-    // Function to animate the scroll
+    // animate the scroll
     function scrollAnimation(currentTime) {
         if (startTime === null) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
-        //const progress = Math.min(timeElapsed / duration, 1); // Ensure progress is between 0 and 1
-         const scrollAmount = easeInOut(timeElapsed, startPosition, distance, duration);
-
-        // Calculate the current position for scroll
-        //const scrollTo = startPosition + distance * progress;
-        window.scrollTo(0, scrollAmount);
-
-        // Continue the animation if not yet done
+        const progress = Math.min(timeElapsed / duration, 1); // Ensure progress is between 0 and 1
+        const scrollTo = startPosition + distance * progress;
+        window.scrollTo(0, scrollTo);
         if (timeElapsed < duration) {
             requestAnimationFrame(scrollAnimation);
         }
     }
-
-    // Start the animation
     requestAnimationFrame(scrollAnimation);
 }
 
@@ -71,12 +60,11 @@ function easeInOut(time, startValue, changeInValue, duration) {
 
 
 
-// Select the "Return to Top" button
+// Return to Top button
 const returnToTopButton = document.getElementById('return-to-top');
 
-// Listen for the scroll event to toggle the visibility of the button
+// If the page is scrolled down more than 100px, show the button
 window.addEventListener('scroll', () => {
-    // If the page is scrolled down more than 100px, show the button
     if (window.scrollY > 100) {
         returnToTopButton.style.display = 'block';
     } else {
@@ -84,7 +72,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add click event to the "Return to Top" button to scroll the page to the top
+
 returnToTopButton.addEventListener('click', () => {
     smoothScrollToTop();
 });
@@ -94,14 +82,14 @@ function smoothScrollToTop() {
     const startPosition = window.scrollY;
     const targetPosition = 0; // Scroll to the very top
     const distance = startPosition - targetPosition;
-    const duration = 700; // Scroll duration (in ms)
+    const duration = 800; 
     let startTime = null;
 
     // Animation function to scroll the page
     function scrollAnimation(currentTime) {
         if (startTime === null) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1); // Ensure progress is between 0 and 1
+        const progress = Math.min(timeElapsed / duration, 1);
 
         const scrollTo = startPosition - distance * progress;
         window.scrollTo(0, scrollTo);
@@ -115,15 +103,21 @@ function smoothScrollToTop() {
 }
 
 
-const coverImage = document.querySelector('.cover-img');
 
-// Add a scroll event listener
-window.addEventListener('scroll', function() {
-    // Calculate how far the page has been scrolled
-    const scrollY = window.scrollY;
+// parallex effect
 
-    // Adjust the position of the cover image based on scroll
-    coverImage.style.transform = `translateY(${scrollY * 0.5}px)`; // 0.5 makes it scroll slower
+window.addEventListener("scroll", function() {
+    document.querySelectorAll(".parallex").forEach(img => {
+        let scrollPosition = window.pageYOffset;
+        img.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+    });
 });
+
+
+
+
+
+
+
 
 
