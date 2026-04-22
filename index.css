@@ -10,19 +10,29 @@ html {
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color:white;
-    font-weight: 400;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-   
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+}
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
 
 .aboutSection{
-    background-color: #F0F0F0;
-    h2, p, ul li { 
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+    h2, p, ul, li {
       color: black !important; 
   }  
     
@@ -53,8 +63,8 @@ body {
 .projectsSection{
     color: #FFFFFF; 
     background-color: #002856;
-    h2, p, ul li { 
-        color: #FFFFFF !important; 
+    h2, p, ul li {
+        color: #FFFFFF !important;
     }
 
 
@@ -247,10 +257,10 @@ ul {
 }
 
 footer {
-    background-color: #707070;
+    background-color: #222;
     color: #fff;
-    padding: 1rem 0;
     text-align: center;
+    padding: 20px;
 }
 
 .parallex {
@@ -259,11 +269,6 @@ footer {
     width: 100%;
     object-fit: cover;
 }
-
-
-
-
-
 
 /* Mobile Styles (Media Query) */
 @media (max-width: 768px) {
@@ -362,12 +367,6 @@ nav ul.active {
     background-color: #555; /* Darker background on hover */
 }
 
-
-
-
-
-
-
-
-
-
+colorWhite {
+    color: white !important;
+}

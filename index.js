@@ -50,57 +50,35 @@ function smoothScrollTo(targetElement) {
 
 
 
-function easeInOut(time, startValue, changeInValue, duration) {
-    time /= duration / 2;
-    if (time < 1) return (changeInValue / 2) * time * time + startValue;
-    time--;
-    return (-changeInValue / 2) * (time * (time - 2) - 1) + startValue;
-}
+// Back to Top Button
+const backToTopButton = document.createElement('button');
+backToTopButton.innerText = '↑';
+backToTopButton.id = 'back-to-top';
+backToTopButton.style.position = 'fixed';
+backToTopButton.style.bottom = '20px';
+backToTopButton.style.right = '20px';
+backToTopButton.style.display = 'none';
+backToTopButton.style.padding = '10px';
+backToTopButton.style.borderRadius = '50%';
+backToTopButton.style.backgroundColor = '#007BFF';
+backToTopButton.style.color = '#fff';
+backToTopButton.style.border = 'none';
+backToTopButton.style.cursor = 'pointer';
+backToTopButton.style.zIndex = '1000';
 
+document.body.appendChild(backToTopButton);
 
-
-
-// Return to Top button
-const returnToTopButton = document.getElementById('return-to-top');
-
-// If the page is scrolled down more than 100px, show the button
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        returnToTopButton.style.display = 'block';
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = 'block';
     } else {
-        returnToTopButton.style.display = 'none';
+        backToTopButton.style.display = 'none';
     }
 });
 
-
-returnToTopButton.addEventListener('click', () => {
-    smoothScrollToTop();
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
-// Smooth scroll to the top of the page with custom speed
-function smoothScrollToTop() {
-    const startPosition = window.scrollY;
-    const targetPosition = 0; // Scroll to the very top
-    const distance = startPosition - targetPosition;
-    const duration = 800; 
-    let startTime = null;
-
-    // Animation function to scroll the page
-    function scrollAnimation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-
-        const scrollTo = startPosition - distance * progress;
-        window.scrollTo(0, scrollTo);
-
-        if (timeElapsed < duration) {
-            requestAnimationFrame(scrollAnimation);
-        }
-    }
-
-    requestAnimationFrame(scrollAnimation);
-}
 
 
 
@@ -112,12 +90,3 @@ window.addEventListener("scroll", function() {
         img.style.transform = `translateY(${scrollPosition * 0.3}px)`;
     });
 });
-
-
-
-
-
-
-
-
-

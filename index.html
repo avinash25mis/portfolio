@@ -3,71 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Lead Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Avinash Mishra, Lead Software Engineer">
+    <meta name="keywords" content="Portfolio, Software Engineer, Avinash Mishra">
+    <meta name="author" content="Avinash Mishra">
+    <title>Avinash Mishra - Portfolio</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-
-
+    <!-- Header Section -->
     <header>
-     
-
-        <div class="cover-photo ">
+        <div class="cover-photo">
             <img src="cover.jpg" alt="Cover Photo" class="cover-img parallex">
-
         </div>
-     
         <div class="container header-content profileSection">
             <div class="profile">
                 <img src="profile.jpg" alt="Profile Photo" class="profile-img">
-                <h2>Avinash Mishra</h2>
+                <h1>Avinash Mishra</h1>
                 <p>Lead Software Engineer</p>
-                  <br>
-            </div>   
+            </div>
         </div>
     </header>
 
+    <!-- Navigation Section -->
     <div class="navHeading">
-      <!-- Hamburger Icon for Mobile -->
-                <div class="hamburger" id="hamburger-icon">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-      
-                <nav>
-                  <ul id="nav-list" class="nav-list">
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#skills">Skills</a></li>
-                      <li><a href="#projects">Projects</a></li>
-                      <li><a href="#experience">Experience</a></li>
-                      <li><a href="#contact">Contact</a></li>
-                  </ul>
-              </nav>
+        <div class="hamburger" id="hamburger-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul id="nav-list" class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 
-  
+    <!-- About Section -->
     <section id="about" class="section aboutSection">
-        <div class="container">
-            <h2>About Me</h2>
-<p>
-    Lead Software Engineer with 10 years of experience in full-stack development using Java, Spring
-    Boot, JavaScript, AEM, and modern web technologies. Proven track record of designing scalable, secure, and high-
-    performance applications in finance, banking and telecommunication domains.
-    Experienced in leading and mentoring engineering teams, driving technical decisions, and ensuring reliable product
-    delivery through strong collaboration and agile practices. Skilled at translating complex business requirements into
-    robust technical solutions while maintaining high code quality and system reliability. Leverages AI-assisted development
-    tools such as GitHub Copilot and LLMs for rapid prototyping, intelligent code generation, and improved development
-    efficiency—enabling the delivery of innovative solutions with speed and precision.
-</p>
-        </div>
+        <h2>About Me</h2>
+        <p style="padding:20px">Lead Software Engineer with 10 years of experience in full-stack development using Java, Spring
+            Boot, AEM, and modern web technologies. Proven track record of designing scalable, secure, and high-performance applications in finance, banking and telecommunication domains.
+
+            Experienced in leading and mentoring engineering teams, driving technical decisions, and ensuring reliable product
+            delivery through strong collaboration and agile practices. Skilled at translating complex business requirements into
+            robust technical solutions while maintaining high code quality and system reliability. Leverages AI-assisted development
+            tools such as GitHub Copilot and LLMs for rapid prototyping, intelligent code generation, and improved development
+            efficiency, enabling the delivery of innovative solutions with speed and precision.</p>
     </section>
 
-    <div class="about-photo">
-      <img src="about.jpg" alt="Background Photo" class="about-img parallex">
-   </div>
-
+    <!-- Skills Section -->
     <section id="skills" class="section skillSection">
         <div class="container">
             <h2>Skills</h2>
@@ -116,21 +104,39 @@
         </div>
     </section>
 
-    <div class="skill-photo">
-      <img src="skill.jpg" alt="Background Photo" class="skill-img">
-   </div>
-
+    <!-- Projects Section -->
     <section id="projects" class="section projectsSection">
         <div class="container">
-            <h1>Projects</h1>
+            <h1 style="color:white">Projects</h1>
             <br>
             <div class="project">
+                <section aria-labelledby="aem-title">
+                    <h2 id="ai-title">AI Email Generation Platform</h2>
+                    <p>
+                        An intelligent email drafting tool that dynamically generates professional email content based on user-selected
+                        parameters. It offers three distinct writing styles per request and supports advanced features like context clearing,
+                        conversation history, and file uploads for contextual email creation.
+                    </p>
+                    <p> <b>Technologies:</b> Java 17, Spring Boot 2, Spring Data JPA, ReactJS, MySQL, AWS etc</p>
+                    <h3 >Responsibilities</h3>
+                    <ul>
+                        <li> Integrated OpenAI ChatGPT-4 API to generate multi-version email drafts (formal, concise, and detailed) based on
+                        predefined parameters.</li>
+                        <li> Designed a ReactJS interface enabling users to input context, upload files, and view chat history seamlessly.</li>
+                        <li> Implemented prompt orchestration logic ensuring consistent tone, format, and response diversity across multiple
+                        generations.</li>
+                        <li> Enabled session management for context retention, allowing users to continue previous email threads or regenerate
+                        specific versions.</li>
+                    </ul >
+                </section>
+                <br> <br>
                 <section aria-labelledby="aem-title">
                     <h2 id="aem-title">Event and Marketing CMS (Built on Adobe Experience Manager / AEM)</h2>
                     <p>
                         An implementation of Adobe Experience Manager powering the marketing pages of the
                         <em>gartner.com</em> domain. It assists Gartner in generating leads and managing conferences and webinars.
                     </p>
+                    <p> <b>Technologies:</b> Java 17, AEM, JavaScript, ReactJS, PostgreSQL AWS, etc</p>
                     <h3>Responsibilities</h3>
                     <ul>
                         <li>Enhanced lead capture forms and data pipelines, contributing to <strong>15% growth</strong> in qualified leads for conferences/webinars.</li>
@@ -147,6 +153,7 @@
                         share issuance, transfers, and reporting, ensuring compliance with regulatory standards while providing
                         investors with transparent access to their holding.
                     </p>
+                    <p> <b>Technologies:</b> Java 11, Spring Boot, JavaScript, ReacJS,, MongDB, Kafka, AWS, Docker</p>
                     <h3>Responsibilities</h3>
                     <ul>
                         <li>Designed &amp; implemented a secure registry system handling <strong>100K+</strong> shareholder records with audit trails and role-based access.</li>
@@ -161,6 +168,7 @@
                         A large-scale banking product designed to digitize the complete loan booking process. It supports multiple
                         lines of business and workflows, including Personal Loans, Home Loans, and Mortgages.
                     </p>
+                    <p> <b>Technologies:</b> Java 8 , Spring MVC, JavaScript, Hibernate, MySQL, jQuery, BootStrap</p>
                     <h3>Responsibilities</h3>
                     <ul>
                         <li>Full-stack development for workflows involving Lead Details, KYC, Credit Approval, and Disbursal.</li>
@@ -174,6 +182,7 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience" class="section experienceSection">
         <div class="container">
             <h2>Experience</h2>
@@ -207,6 +216,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <div class="contact-photo">
       <img src="contact.jpg" alt="Background Photo" class="contact-img ">
    </div>
@@ -228,7 +238,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Avinash Mishra | Senior Lead Developer</p>
+            <p>&copy; 2026 Avinash Mishra. All rights reserved.</p>
         </div>
     </footer>
 
